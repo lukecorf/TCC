@@ -4,7 +4,7 @@
       <img src="http://www.rafacademy.com/wp-content/uploads/2017/03/user-default.png" class="img-responsive" alt="">
     </div>
     <div class="profile-username">
-      Lucas Alves
+      {{name}}
     </div>
     <div class="profile-type">
       Aluno
@@ -12,11 +12,10 @@
   </div>
   <div class="options">
     <ul>
-      <li><p>Home</p></li>
-      <li><p>Notas</p></li>
-      <li><p>Entregas</p></li>
-      <li><p>Materiais</p></li>
-      <li><p>Documentos</p></li>
+      <li class="mouse-hover" (click)="goHome()"><p>Home</p></li>
+      <li class="mouse-hover" (click)="goHistorico()"><p>Historico</p></li>
+      <li class="mouse-hover" (click)="goPerfil()"><p>Perfil</p></li>
+
     </ul>
   </div>
 

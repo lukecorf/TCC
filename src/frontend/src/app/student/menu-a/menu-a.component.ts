@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {UserData} from "../../services/userdata.service";
 
 @Component({
   selector: 'menua-component',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuAComponent implements OnInit {
 
+  name: string;
+  code: string;
+
   cssType: string;
-  constructor() { }
+  constructor(private router: Router) {
+    this.name = UserData.getAluno().nome;
+    this.code = UserData.getAluno().matricula;
+  }
 
   ngOnInit() {
     if(window.screen.width < 768){
@@ -19,4 +27,15 @@ export class MenuAComponent implements OnInit {
 
   }
 
+  goHistorico(){
+    this.router.navigate(['historico-a/'+this.code]);
+  }
+
+  goHome(){
+    this.router.navigate(['home-aluno/'+this.code]);
+  }
+
+  goPerfil(){
+    this.router.navigate(['perfil-a/'+this.code]);
+  }
 }

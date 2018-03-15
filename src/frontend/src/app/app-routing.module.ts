@@ -20,8 +20,8 @@ const appRoutes: Routes = [
   { path: '' , component: LoginComponent},
   { path: 'home-aluno/:id',canActivate: [AuthGuard] , component: HomeAComponent },
   { path: 'disciplina-a',canActivate: [AuthGuard] , component: DisciplinaAComponent},
-  { path: 'historico-a', canActivate: [AuthGuard] , component: HistoricoAComponent},
-  { path: 'perfil-a', canActivate: [AuthGuard] , component: PerfilAComponent},
+  { path: 'historico-a/:id', canActivate: [AuthGuard] , component: HistoricoAComponent},
+  { path: 'perfil-a/:id', canActivate: [AuthGuard] , component: PerfilAComponent},
   { path: 'not-found' , component: NotFoundComponent },
   { path: '**', redirectTo: '/not-found'}
 ];

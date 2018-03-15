@@ -9,6 +9,9 @@
   border-radius: 50% !important;
 }
 
+.mouse-hover{
+  cursor:pointer;
+}
 
 .profile-user{
   padding-top: 5vh;

@@ -31,9 +31,9 @@ public class LoginProvider {
         LoginObject loginO = gson.fromJson(login, LoginObject.class);
 
         if(verify(loginO)){
-            return gson.toJson(new Aluno("AAA","","","",true,"","","",""));
+            return gson.toJson(new Aluno("001","Lucas Alves de Faria","2018/1","10/12/1995",true,"luke@email.com","37999999999","111111111-11","MG 111.111-11"));
         }else{
-            return gson.toJson(new Aluno("ERROR","","","",true,"","","",""));
+            return gson.toJson(new Aluno("ERROR","ERROR-LOGIN","","",true,"","","",""));
         }
 
 

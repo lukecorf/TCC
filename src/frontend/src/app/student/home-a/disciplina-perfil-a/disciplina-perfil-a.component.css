@@ -2,15 +2,20 @@
   width: 47vw;
 }
 
-.disciplina-perfil{
-  background-color: #00bbd3;
-}
-
 .disciplina-detalhes{
     background-color: #00bbd3;
     color: #fff;
     padding-left: 50px;
     padding-top: 20px;
+    cursor:pointer;
+  transition: all 0.3s;
+}
+
+.disciplina-detalhes:hover {
+  background-color: #077e97;
+  color: #fff;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
 .disciplina-foto{

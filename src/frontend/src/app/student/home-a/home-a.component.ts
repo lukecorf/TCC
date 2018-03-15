@@ -4,6 +4,7 @@ import {Materia} from "./models/materia.model";
 import {Aluno} from "./models/aluno.model";
 import {UserDataService} from "./services/user-data.service";
 import {ActivatedRoute} from "@angular/router";
+import {UserData} from "../../services/userdata.service";
 
 
 @Component({
@@ -22,18 +23,16 @@ export class HomeAComponent implements OnInit {
 
   constructor(private userData: UserDataService, private route: ActivatedRoute) {
     console.log(route.snapshot.params['id'])
-    userData.getAluno().subscribe(
-      user => {
-        this.aluno = user;
-      }
-    );
-
 
     userData.getDisciplinas().subscribe(
         disciplinas => {
           this.materias = disciplinas;
         }
     );
+
+    this.aluno = UserData.getAluno()
+    console.log('NAME HERE => '+UserData.getAluno().nome);
+
   }
 
   ngOnInit() {

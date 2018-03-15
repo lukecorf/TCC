@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {NavigationExtras, Router} from '@angular/router';
 
 import { LoginService } from '../sevices/login.service';
 import { Login } from './models/login.model';
 import {NgForm} from "@angular/forms";
 import {AuthService} from "../../auth.service";
 import {Aluno} from "../../student/home-a/models/aluno.model";
+import {UserData} from "../../services/userdata.service";
 
 @Component({
   selector: 'data-login-component',
@@ -40,11 +41,10 @@ export class DataLoginComponent implements OnInit {
 
   verifyLogin(change: Aluno){
 
-    console.log("HERE: "+change.matricula)
-    if(change.matricula !== 'ERROR-LOGIN'){
-      console.log('OK');
+    if(change.nome !== 'ERROR-LOGIN'){
       this.authService.login();
-      this.router.navigate(['disciplina-a']);
+      UserData.setAluno(change);
+      this.router.navigate(['home-aluno/'+change.matricula]);
     }else{
       console.log('ERROR');
     }
