@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {ModalModel} from "./models/modal.model";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'disciplina-a',
@@ -20,7 +21,7 @@ export class DisciplinaAComponent implements OnInit {
   public pieChartType:string = 'pie';
   public pieChartOptions: any = {responsive: true, maintainAspectRatio: false}
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private route: ActivatedRoute) { }
 
   ngOnInit() {
     if(window.screen.width < 768){
@@ -30,6 +31,9 @@ export class DisciplinaAComponent implements OnInit {
       this.opened = 'open';
       this.closed = 'content';
     }
+
+    console.log('Codigo da Disciplina: '+ this.route.snapshot.params['id']);
+
   }
 
   changeOpt(){

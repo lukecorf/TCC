@@ -31,7 +31,6 @@ export class HomeAComponent implements OnInit {
     );
 
     this.aluno = UserData.getAluno()
-    console.log('NAME HERE => '+UserData.getAluno().nome);
 
   }
 

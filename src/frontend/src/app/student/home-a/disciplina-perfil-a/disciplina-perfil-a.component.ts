@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'disciplina-perfil-a',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisciplinaPerfilAComponent implements OnInit {
 
+  @Input() codigo: string;
   @Input() nome: string;
   @Input() status: string;
   @Input() professor:string;
@@ -16,9 +18,13 @@ export class DisciplinaPerfilAComponent implements OnInit {
   @Input() nota: number;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goDisciplina(){
+    this.router.navigate(['disciplina-a/'+this.codigo]);
   }
 
 }

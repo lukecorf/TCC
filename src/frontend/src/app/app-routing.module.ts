@@ -19,7 +19,7 @@ import {PerfilAComponent} from "./student/perfil-a/perfil-a.component";
 const appRoutes: Routes = [
   { path: '' , component: LoginComponent},
   { path: 'home-aluno/:id',canActivate: [AuthGuard] , component: HomeAComponent },
-  { path: 'disciplina-a',canActivate: [AuthGuard] , component: DisciplinaAComponent},
+  { path: 'disciplina-a/:id',canActivate: [AuthGuard] , component: DisciplinaAComponent},
   { path: 'historico-a/:id', canActivate: [AuthGuard] , component: HistoricoAComponent},
   { path: 'perfil-a/:id', canActivate: [AuthGuard] , component: PerfilAComponent},
   { path: 'not-found' , component: NotFoundComponent },
