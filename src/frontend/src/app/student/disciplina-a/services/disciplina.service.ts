@@ -9,7 +9,7 @@ export class DisciplinaService {
 
   private url = 'http://localhost:8080/getDisciplina';
   constructor(private http: HttpClient){}
-
+/*
   getAluno():Observable<DisciplinaData>{
     return this.http.get<Aluno>(this.url);
   }
@@ -17,4 +17,5 @@ export class DisciplinaService {
   getDisciplinas():Observable<Materia[]>{
     return this.http.get<Materia[]>(this.urlMateria);
   }
+  */
 }

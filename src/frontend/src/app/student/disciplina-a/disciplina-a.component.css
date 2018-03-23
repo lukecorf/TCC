@@ -5,20 +5,19 @@
   cursor: pointer;
 }
 
+.table-align{
+  text-align: center;
+  float: inherit;
+}
+
 .disciplina-titulos{
   width: 100%;
   height: 7%;
-  margin-top: 15px;
+  margin-top: 0px;
   margin-left:0px;
   margin-right: 0px;
   margin-bottom: 0px;
   background: #b0bec5;
-
-}
-
-.table-align{
-  text-align: center;
-  float: inherit;
 }
 
 .disciplina-info{
@@ -32,7 +31,7 @@
 
 .disciplina-data{
   width: 100%;
-  height: 58%;
+  height: 55%;
   margin-top: 0px;
   margin-left:0px;
   margin-right: 0px;

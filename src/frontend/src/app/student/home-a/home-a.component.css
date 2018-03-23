@@ -45,10 +45,9 @@
 }
 
 .disciplina-style{
-
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 90vh;
+  height: 86vh;
 }
 
 #scroll-style::-webkit-scrollbar-track
@@ -74,6 +73,8 @@
 }
 
 .menu-area{
+
+  height: 8vh;
   font-size: 36px;
   display:block;
   vertical-align: middle;
