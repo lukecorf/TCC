@@ -24,6 +24,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { DisciplinaAComponent } from './student/disciplina-a/disciplina-a.component';
 import { HistoricoAComponent } from './student/historico-a/historico-a.component';
 import { PerfilAComponent } from './student/perfil-a/perfil-a.component';
+import { HomePComponent } from './teacher/home-p/home-p.component';
+import { MenuPComponent } from './teacher/menu-p/menu-p.component';
+import { DisciplinaPerfilPComponent } from './teacher/home-p/disciplina-perfil-p/disciplina-perfil-p.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { PerfilAComponent } from './student/perfil-a/perfil-a.component';
     DisciplinaPerfilAComponent,
     DisciplinaAComponent,
     HistoricoAComponent,
-    PerfilAComponent
+    PerfilAComponent,
+    HomePComponent,
+    MenuPComponent,
+    DisciplinaPerfilPComponent
   ],
   imports: [
     BrowserModule,

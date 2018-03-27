@@ -15,10 +15,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {DisciplinaAComponent} from "./student/disciplina-a/disciplina-a.component";
 import {HistoricoAComponent} from "./student/historico-a/historico-a.component";
 import {PerfilAComponent} from "./student/perfil-a/perfil-a.component";
+import {HomePComponent} from "./teacher/home-p/home-p.component";
 
 const appRoutes: Routes = [
   { path: '' , component: LoginComponent},
   { path: 'home-aluno/:id',canActivate: [AuthGuard] , component: HomeAComponent },
+  { path: 'home-professor/:id',canActivate: [AuthGuard] , component: HomePComponent },
   { path: 'disciplina-a/:id',canActivate: [AuthGuard] , component: DisciplinaAComponent},
   { path: 'historico-a/:id', canActivate: [AuthGuard] , component: HistoricoAComponent},
   { path: 'perfil-a/:id', canActivate: [AuthGuard] , component: PerfilAComponent},

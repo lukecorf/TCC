@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationExtras, Router} from '@angular/router';
+import {Router} from '@angular/router';
 
 import { LoginService } from '../sevices/login.service';
 import { Login } from './models/login.model';
@@ -44,7 +44,7 @@ export class DataLoginComponent implements OnInit {
     if(change.nome !== 'ERROR-LOGIN'){
       this.authService.login();
       UserData.setAluno(change);
-      this.router.navigate(['home-aluno/'+change.matricula]);
+      this.router.navigate(['home-professor/'+change.matricula]);
     }else{
       console.log('ERROR');
     }
