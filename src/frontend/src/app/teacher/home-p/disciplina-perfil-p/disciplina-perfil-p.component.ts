@@ -25,7 +25,7 @@ export class DisciplinaPerfilPComponent implements OnInit {
   }
 
   goDisciplina(){
-    this.router.navigate(['disciplina-a/'+this.codigo]);
+    this.router.navigate(['disciplina-p/'+this.codigo]);
   }
 
 }

@@ -4,14 +4,15 @@ import {Materia} from "../../student/home-a/models/materia.model";
 import {UserDataService} from "../../student/home-a/services/user-data.service";
 import {ActivatedRoute} from "@angular/router";
 import {UserData} from "../../services/userdata.service";
-
+import { Observable, Subscription } from 'rxjs/Rx';
 @Component({
   selector: 'app-home-p',
   templateUrl: './home-p.component.html',
   styleUrls: ['./home-p.component.css']
 })
 export class HomePComponent implements OnInit {
-
+  private timer;
+  private sub: Subscription;
   open: boolean = true;
   opened: string;
   closed: string;
@@ -40,6 +41,9 @@ export class HomePComponent implements OnInit {
       this.opened = 'open';
       this.closed = 'content';
     }
+
+    this.timer = Observable.timer(500);
+    this.sub = this.timer.subscribe(t => this.changeOpt());
 
   }
 
