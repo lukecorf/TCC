@@ -43,8 +43,9 @@ export class DataLoginComponent implements OnInit {
 
     if(change.nome !== 'ERROR-LOGIN'){
       this.authService.login();
+      //this.authService.login();
       UserData.setAluno(change);
-      this.router.navigate(['home-professor/'+change.matricula]);
+      this.router.navigate(['perfil-p/'+change.matricula]);
     }else{
       console.log('ERROR');
     }

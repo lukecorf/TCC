@@ -17,6 +17,7 @@ import {HistoricoAComponent} from "./student/historico-a/historico-a.component";
 import {PerfilAComponent} from "./student/perfil-a/perfil-a.component";
 import {HomePComponent} from "./teacher/home-p/home-p.component";
 import {DisciplinaPComponent} from "./teacher/disciplina-p/disciplina-p.component";
+import {PerfilPComponent} from "./teacher/perfil-p/perfil-p.component";
 
 const appRoutes: Routes = [
   { path: '' , component: LoginComponent},
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'disciplina-p/:id',canActivate: [AuthGuard] , component: DisciplinaPComponent},
   { path: 'historico-a/:id', canActivate: [AuthGuard] , component: HistoricoAComponent},
   { path: 'perfil-a/:id', canActivate: [AuthGuard] , component: PerfilAComponent},
+  { path: 'perfil-p/:id', canActivate: [AuthGuard] , component: PerfilPComponent},
   { path: 'not-found' , component: NotFoundComponent },
   { path: '**', redirectTo: '/not-found'}
 ];

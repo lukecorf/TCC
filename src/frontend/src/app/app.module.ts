@@ -28,6 +28,7 @@ import { HomePComponent } from './teacher/home-p/home-p.component';
 import { MenuPComponent } from './teacher/menu-p/menu-p.component';
 import { DisciplinaPerfilPComponent } from './teacher/home-p/disciplina-perfil-p/disciplina-perfil-p.component';
 import { DisciplinaPComponent } from './teacher/disciplina-p/disciplina-p.component';
+import { PerfilPComponent } from './teacher/perfil-p/perfil-p.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DisciplinaPComponent } from './teacher/disciplina-p/disciplina-p.compon
     HomePComponent,
     MenuPComponent,
     DisciplinaPerfilPComponent,
-    DisciplinaPComponent
+    DisciplinaPComponent,
+    PerfilPComponent
   ],
   imports: [
     BrowserModule,

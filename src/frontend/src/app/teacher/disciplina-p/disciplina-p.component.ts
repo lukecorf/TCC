@@ -15,7 +15,7 @@ export class DisciplinaPComponent implements OnInit {
   open: boolean = true;
   opened: string;
   closed: string;
-
+  //TODO arrumar o tamanho das letras nos botoes
   constructor(private modalService: NgbModal, private route: ActivatedRoute) { }
 
   ngOnInit() {
